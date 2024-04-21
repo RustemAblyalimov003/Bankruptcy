@@ -2680,7 +2680,7 @@ a#scrolling:hover{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        padding: 97px 0 0 0;
+        padding: 50px 0 0 0;
         gap: 33px;
     }
     .footer__left-side {
