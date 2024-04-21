@@ -1,0 +1,3277 @@
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Light.woff") format("woff"),
+    url("../fonts/Lato-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Medium.woff") format("woff"),
+    url("../fonts/Lato-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Semibold.woff") format("woff"),
+    url("../fonts/Lato-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Bold.woff") format("woff"),
+    url("../fonts/Lato-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+ @font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Heavy.woff") format("woff"),
+    url("../fonts/Lato-Heavy.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+    font-styleauto: normal;
+} 
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url("../fonts/Lato-Black.woff") format("woff"),
+    url("../fonts/Lato-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:"Lato";
+}
+h1, h2, h3, p {
+    margin: 0;
+
+}
+
+
+.container{
+    margin: 0 auto;
+    max-width: 1140px; 
+}
+
+
+.header{
+    position: fixed;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: white;
+}
+#header.scrolled{
+    height: 60px;
+
+}
+#header.scrolled::before{
+    height: 60px;
+}
+#header.scrolled .header__container_up, 
+#header.scrolled .header__container_low .header__services-btn_low{
+    display: none;
+}
+#header.scrolled .header__container-row_low{
+    height: 46px;
+}
+#header.scrolled .header__container-row_low .header__law-firm_low {
+    padding: 0 0 0 20px;
+}
+#header.scrolled .header__container-row_low .header__nav-bar-menu-list {
+    gap: 30px;
+    padding: 0 0 0 30px;
+}
+#header.scrolled .header__container-row_low .header__nav-bar-menu-list li{
+    font-size: 15px;
+}
+#header.scrolled .header__container_low .header__scroll-bar-free-consultation{
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: #5AB2FF;
+    padding: 0 0 0 35px;
+}
+#header.scrolled .header__container_low .header__nav-bar-services-anchor{
+    display: block;
+}
+
+
+
+
+.header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 136px;
+    background-color: white;
+    z-index: 3;
+    opacity: 0;
+}
+.header .container{
+    position: relative;
+}
+.header__burger,
+.header__burger-phone,
+.header__burger-menu-phone,
+.header__burger-logo{
+    display: none;
+}
+
+.header__burger-phone-link{
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+    color: #313131;
+}
+.header__menu{
+    position: relative;
+    z-index: 4;
+}
+
+.header__container_up{
+    height: 55px;
+    border-bottom: 1px solid;
+    border-bottom-color: #F1F1F1;
+
+}
+.header__container-row_up{
+    display: flex;
+    align-items: center;
+    height: 55px
+    
+}
+.header__location-row_up{
+    padding: 11px 0 11px 0;
+    width: 95px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.header__location-label_up{
+    padding: 5px 0 7px 0;
+
+}
+.header__location-city-name_up{
+    font-weight: 300;
+    font-size: 15px;
+    color: #313131;
+    padding: 0 0 0 9px;
+}
+
+
+.header__time-of-work_up{
+    width: 186px;
+    height: 22px;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 11px 0 11px 72px;
+    color: #313131;
+}
+
+
+.header__social-labels_up{
+    width: 130px;
+    height: 38px;
+    padding: 8px 0 8px 40px;
+}
+.header__social-labels-row_up{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.header__social-label-phone-link, 
+.header__social-label-telegram-link,
+.header__social-label-mail-link {
+    cursor: pointer;
+}
+
+.social-label-bg{
+    width: 38px;
+    height: 38px;
+    background: #F5F5F5;
+    border-radius: 50%;
+}
+.social-label-bg:hover{
+    background: #5AB1FF; 
+}
+.header__up__social_label_telegram{
+    width: 38px;
+    height: 38px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    position: relative;
+}
+.header__up__social_label_mail{
+    width: 38px;
+    height: 38px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    position: relative;
+}
+.social-label-phone-img{
+    position: absolute;
+    padding:  9px 9px 10px 10px;
+}
+.social-label-telegram-img{
+    position: absolute;
+    padding:  10px 11px 10px 9px;
+}
+.social-label-mail-img{
+    position: absolute;
+    padding:  12px 9px 11px 9px;
+}
+
+
+.header__phone-info-row_up{
+    display: flex;
+    padding: 12px 0 10px 107px;
+    align-items: center;
+
+}
+.header__phone-info-number_up{
+    font-weight: 500;
+    font-size: 17px;
+}
+.header__phone-info-number_up a{
+    text-decoration: none;
+    color: #313131;
+}
+.header__phone-info-number_up a:hover{
+    color: #aca8a8;
+}
+.header__phone-info-text_up{
+    padding: 0 0 0 12px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #313131;
+}
+.header__free-consultation_up{
+    padding: 22px 0 21px 79px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: #5AB2FF;
+}
+.header__free-consultation_up:hover{
+    color: #036dca;
+}
+
+.header__container_low{
+    height: 76px;
+
+}
+.header__container-row_low{
+    height: 61px;
+    padding: 6px 0 9px 0;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+
+}
+
+
+.header__logo_low{
+    padding: 12px 0 9px 0;
+
+}
+.header__logo-row_low{
+    display: flex;
+    z-index: 4;
+
+}
+.header__logo-text-img_low{
+    padding: 0 0 0 9px;
+
+}
+
+.header__law-firm_low{
+    font-weight: 300;
+    font-size: 15px;
+    color: #313131;
+    padding: 0 0 0 28px;
+}
+
+.header__services-btn_low{
+    margin: 0 0 0 52px;
+    border-radius:200px;
+    width: 132px;
+    height: 48px;
+    border: 0;
+    cursor: pointer;
+}
+.header__services-btn_low:hover{
+    background-color: #5AB1FF;
+    color: white;
+}
+.header__services-btn-items-row_low{
+    display: flex;
+    align-items: center;
+}
+.header-btn-img{
+    padding: 18px 0 19px 26px;
+
+}
+.header__btn-txt{
+   padding: 8px 27px 9px 11px;  
+   font-weight: 700;
+   font-size: 16px;
+}
+.header__btn-txt:hover{
+    color: #FFFFFF;
+}
+.header__nav-bar-menu-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 0 0 40px;
+}
+.header__nav-bar-menu-list li{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0;
+    text-decoration: none;
+}
+.header__nav-bar-menu-list li a{
+    text-decoration: none;
+    color: #313131;
+}
+.header__nav-bar-menu-list li a:hover{
+    text-decoration: none;
+    color: #bdb8b8;
+}
+.header__scroll-bar-free-consultation, 
+.header__nav-bar-services-anchor{
+    display: none;
+}
+
+.release-from-debt{
+    max-width: 100%;
+    height: 726px;
+    background-image: url(../images/banner_bg.png);
+    background-position-x: center;
+    padding: 132px 0 0 0;
+    background-repeat: no-repeat;
+    background-position-y: 108px;
+}
+.release-from-debt__row{
+    display: flex;
+    flex-direction: column;
+    width: 625px;
+    height: 651px;
+}
+.release-from-debt__title{
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 60px;
+    padding: 90px 0 0 0;
+    width: 693px;
+    height: 148px;
+}
+.release-from-debt__ul-title{
+    width: 482px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 19px;
+    color: #313131;
+    margin: 0;
+}
+.release-from-debt__ul{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 0 0 19px;
+
+}
+.release-from-debt__btn{
+    height: 58px;
+    width: 243px;
+    border: 1px solid #313131;
+    border-radius: 200px;
+    cursor: pointer;
+    background: transparent;
+    margin: 42px 0 0 0;
+}
+.release-from-debt__btn:hover{
+    background-color: #5AB1FF;
+    border: none;
+}
+.release-from-debt__btn-row{
+    display: flex;
+    align-items: center;
+}
+.release-from-debt__btn-txt{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 18px 8px 23px 39px;
+}
+.release-from-debt__btn:hover > .release-from-debt__btn-row .release-from-debt__btn-txt{
+    color: #FFFFFF;
+}
+.release-from-debt__btn-img{
+    padding: 20px 0 23px 0;
+}
+
+
+
+.stages-of-the-bankruptcy-procedure{
+    height: 778px;
+    padding: 121px 0 0 0;
+}
+.stages-of-the-bankruptcy-procedure__row{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+
+}
+.stages-of-the-bankruptcy-procedure__title{
+    font-weight: 500;
+    font-size: 48px;
+    padding: 0 0 56px 0;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards{
+    height: 267px;
+    position: relative;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-wraper{
+    position: absolute;
+    z-index: 1;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-row{
+    display: flex;
+    gap: 24px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-1{
+    width: 267px;
+    height: 267px;
+    background-image: url(../images/stages-of-the-bankruptcy-procedure__stages-cards__card-1.png);
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-1-text-container{
+    width: 125px;
+    height: 95px;
+    padding: 112px 30px 60px 29px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-1-text-container-txt{
+    font-weight: 500;
+    font-size: 20px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-2{
+    width: 267px;
+    height: 267px;
+    background-image: url(../images/stages-of-the-bankruptcy-procedure__stages-cards__card-2.png);
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-2-text-container{
+    width: 125px;
+    height: 95px;
+    padding: 112px 30px 60px 29px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-2-text-container-txt{
+    font-weight: 500;
+    font-size: 20px;
+    width: 169px;
+    height: 71px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-3{
+    width: 267px;
+    height: 267px;
+    background-image: url(../images/stages-of-the-bankruptcy-procedure__stages-cards__card-3.png);
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-3-text-container{
+    width: 125px;
+    height: 95px;
+    padding: 112px 30px 60px 29px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-3-text-container-txt{
+    width: 178px;
+    height: 68px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-4{
+    width: 267px;
+    height: 267px;
+    background-image: url(../images/stages-of-the-bankruptcy-procedure__stages-cards__card-4.png);
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-4-text-container{
+    width: 125px;
+    height: 95px;
+    padding: 112px 30px 60px 29px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-4-text-container-txt{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.stages-of-the-bankruptcy-procedure__stages-cards-linear-gradient-wraper{
+    position: absolute;
+    z-index: 2;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-linear-gradient-row{
+    display: flex;
+    gap: 59px;
+    padding: 71px 0 0 73px;
+}
+.stages-of-the-bankruptcy-procedure__stages-cards-card-2-rectangle{
+    padding: 0 0 0 291px;
+}
+.stages-of-the-bankruptcy-procedure__ol-title{
+    padding: 37px 0 0 0;
+    font-weight: 500;
+    font-size: 17px;
+    width: 641px;
+    height: 100%;
+    color: #313131;
+}
+.stages-of-the-bankruptcy-procedure__ol{
+    padding-inline-start: 16px;
+    margin: 26px 0 0 0;
+    width: 892px;
+}
+li{
+     padding-inline-start: 16px;
+     line-height: 25px
+}
+
+
+
+
+.simplified-bankruptcy{
+    height: 828px;
+    
+}
+
+.simplified-bankruptcy__wraper{
+    position: relative;
+
+}
+.simplified-bankruptcy__info{
+    height: 638px;
+    margin: 190px 0 0 0;
+    background-image: url(../images/simplified-bankruptcy_main-bg.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+}
+.simplified-bankruptcy__info-container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.simplified-bankruptcy__info-container-row{
+    width: 602px;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    padding: 105px 0 0 0;
+}
+.simplified-bankruptcy__info-title{
+    font-weight: 500;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding: 0 0 0 5px;
+}
+.simplified-bankruptcy__info-subtitle{
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 12px 0 0 5px ;
+}
+.simplified-bankruptcy__info-ul-title{
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 74px 0 6px 0;
+    margin: 0;
+}
+.simplified-bankruptcy__info-ul{
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 16px;
+}
+.simplified-bankruptcy__info-ul li{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 21px 0 0 5px;
+}
+.simplified-bankruptcy__form-wraper{
+    position: absolute;
+    z-index: 2;
+    right: calc((100vw - 1200px) / 2);
+    
+}
+.simplified-bankruptcy__form-container{
+    background-image: url(../images/simplified-bankruptcy_form-bg.png);
+    width: 540px;
+    height: 759px;
+}
+.simplified-bankruptcy__form-container-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 443px;
+    height: 354px;
+    padding: 349px 49px 56px 49px;
+}
+.simplified-bankruptcy__form-title{
+    width: 450px;
+    font-weight: 500;
+    font-size: 26px;
+    color: #FFFFFF;
+}
+.form-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 41px 0 0 0;
+
+}
+.form__input{
+    width: 363px;
+    height: 58px;
+    background: #FFFFFF;
+    border-radius: 200px;
+    border: none;
+    padding: 0 0 0 32px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #313131;
+}
+.form__input:focus{
+    outline: none;
+}
+.form__input::placeholder{
+    color: #313131;
+    font-weight: 400;
+    font-size: 18px;
+}
+.form__btn{
+    max-width: 395px;
+    width: 100%;
+    height: 58px;
+    background: #FF5C00;
+    border-radius: 200px;
+    border: none;
+    cursor: pointer;
+}
+.form__btn:hover{
+    background-color: #5AB1FF;
+}
+.form__btn-title{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.form__chekbox-row{
+    height: 52px;
+    width: 355px;
+    position: relative;
+}
+.form__chekbox-input{
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+.form__chekbox-label{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    position: absolute;
+    padding: 0 0 0 50px;
+}
+.form__chekbox-label a{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form__chekbox-label::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #FFFFFF;
+}
+.form__chekbox-label::after{
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    width: 5px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transition: 0.2s ease;
+}
+.form__chekbox-input:not(:checked) + .form__chekbox-label::after{
+    transform: scale(0);
+    opacity: 0;
+
+}
+.form__chekbox-input:checked + .form__chekbox-label::after{
+    transform: rotate(35deg) scale(1);
+    opacity: 1;
+    
+}
+
+
+
+.bankruptcy-text-reviews{
+    max-width: 100%;
+    height: 675px;
+    margin: 122px 0 0 0;
+}
+.bankruptcy-text-reviews__row{
+    display: flex;
+    flex-direction: column;
+
+}
+.bankruptcy-text-reviews__title-and-swiper-button-arrows{
+    max-width: 1140px;
+    position: absolute;
+    margin: 0 auto;  
+    z-index: 0;
+}
+.bankruptcy-text-reviews__swiper-button-arrows{
+    height: 2px;
+    width: 10px;
+    background-color: black;
+}
+
+
+.bankruptcy-text-reviews .swiper{
+    height: 675px;
+    max-width: 100%;
+}
+.bankruptcy-text-reviews .swiper .bankruptcy-text-reviews__title{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 390px;
+    top: 0;
+    font-weight: 500;
+    font-size: 48px;
+    height: 60px;
+    width: 800px;
+}
+.bankruptcy-text-reviews .swiper .swiper-wrapper{
+    padding: 108px 0 0 0;
+}
+.bankruptcy-text-reviews .swiper .swiper-wrapper{
+    height: 418px;
+}
+.bankruptcy-text-reviews .swiper .swiper-wrapper .swiper-slide{
+    height: 418px;
+    width: 364px;
+    background-image: url(../images/bankruptcy-text-reviews__swiper-slide__bg.png);
+}
+.bankruptcy-text-reviews__swiper-slide-row{
+    display: flex;
+    flex-direction: column;
+}
+.bankruptcy-text-reviews__swiper-slide-full-name-and-photo{
+    display: flex;
+    width: 285px;
+    height: 87px;
+    align-items: center;
+    padding: 27px 0 0 37px;
+    gap: 18px;
+}
+.bankruptcy-text-reviews__swiper-slide-full-name{
+    font-weight: 700;
+    font-size: 15px;
+}
+.bankruptcy-text-reviews__swiper-slide-info-row{
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 0 37px;
+    gap: 29px;
+}
+.bankruptcy-text-reviews__swiper-slide-case{
+    font-weight: 500;
+    font-size: 15px;
+}
+.bankruptcy-text-reviews__swiper-slide-main-txt{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 134.2%;
+}
+.bankruptcy-text-reviews__arrows-wrapper{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 119px;
+    height: 55px;
+    right: calc((100vw - 1530px));
+    left: calc((100vw - 510px));
+    display: flex;
+    gap: 11px;
+}
+.bankruptcy-text-reviews__swiper-circle{
+    height: 54px;
+    width: 54px;
+    border: 1px solid #313131;
+    border-radius: 50%;
+}
+.bankruptcy-text-reviews__swiper-circle:hover{
+    cursor: pointer;
+    background-color: #F5F5F5; 
+}
+:root {
+    --swiper-theme-color: #313131 !important;
+    --swiper-navigation-size: 23px !important;
+}
+.bankruptcy-text-reviews .swiper-button-next{
+    left: 92px;
+}
+.bankruptcy-text-reviews .swiper-button-prev{
+    left: 12px;
+}
+.bankruptcy-text-reviews__swiper-button-arrow-tail{
+    width: 27px;
+    height: 1.5px;
+    border: none;
+    background-color: #313131;
+}
+.bankruptcy-text-reviews__swiper-button-arrow-tail:hover{
+    cursor: pointer;
+}
+.bankruptcy-text-reviews__swiper-button-arrow-tail-row{
+    position: absolute;
+    top: 26px;
+    right: 15px;
+    display: flex;
+    gap: 36px;
+
+}
+.bankruptcy-text-reviews__all-reviews-btn{
+    cursor: pointer;
+    border: 1px solid #313131;
+    border-radius: 200px;
+    width: 243px;
+    height: 58px;
+    position: absolute;
+    top: 589px;
+    background: white;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+}
+.bankruptcy-text-reviews__all-reviews-btn:hover{
+    background-color: #5AB1FF;
+    border: none;
+}
+.bankruptcy-text-reviews__all-reviews-btn-row{
+    display: flex;
+    align-items: center;
+}
+.bankruptcy-text-reviews__all-reviews-btn-txt{
+    padding: 0 0 0 62px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #313131;
+}
+.bankruptcy-text-reviews__all-reviews-btn:hover > .bankruptcy-text-reviews__all-reviews-btn-row .bankruptcy-text-reviews__all-reviews-btn-txt{
+    color: #FFFFFF;
+}
+.bankruptcy-text-reviews__all-reviews-btn-img{
+    height: 13px;
+    width: 18px;
+    padding: 0 0 0 8px;
+}
+.bankruptcy-text-reviews-100-percent__img{
+    left: 1345px;
+    position: absolute;
+    top: 508px;
+    z-index: 3;
+}
+
+
+
+.bankruptcy-video-reviews{
+    width: 1140px;
+    height: 745px;
+    margin: 76px auto 0 auto;
+    background-image: url(../images/bankruptcy-video-reviews-bg.png) ; 
+    border-radius: 10px;
+}
+.bankruptcy-video-reviews .swiper{
+    width: 996px;
+    height: 745px;
+}
+.bankruptcy-video-reviews__title{
+    font-weight: 500;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding: 70px 0 0 0;
+}
+.bankruptcy-video-reviews .swiper .swiper-wrapper .swiper-slide{
+    height: 405px;
+
+}
+.bankruptcy-video-reviews .swiper .swiper-wrapper{
+    height: 402px !important;
+    padding: 54px 0 0 0;
+
+}
+.bankruptcy-video-reviews__swiper-slide-row{
+    display: flex;
+    flex-direction: column;
+}
+.bankruptcy-video-reviews__swiper-slide-video{
+    width: 446px;
+    height: 295px;
+    border-radius: 10px;
+
+}
+.bankruptcy-video-reviews__swiper-slide-name-and-case-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 0 0;
+
+}
+.bankruptcy-video-reviews__swiper-slide-name{
+    font-weight: 700;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+.bankruptcy-video-reviews__swiper-slide-case{
+    font-weight: 300;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+.bankruptcy-video-reviews__swiper-slide-debt-amount-row{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0 0;
+    gap: 10px;
+}
+.bankruptcy-video-reviews__swiper-slide-debt-amount-txt{
+    font-weight: 300;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.bankruptcy-video-reviews__swiper-slide-debt-amount-number{
+    color: #FF5C00;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.bankruptcy-video-reviews__arrows-wrapper{
+    position: absolute;
+    z-index: 1;
+    width: 119px;
+    height: 55px;
+    top: 63px;
+    right: 0; 
+    left: 877px;
+    display: flex;
+    gap: 11px;
+}
+.bankruptcy-video-reviews__swiper-circle{
+    border: 1px solid #FFFFFF;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+}
+.bankruptcy-video-reviews__swiper-circle:hover{
+    cursor: pointer;
+    background-color: #0a5597;
+}
+ :root .bankruptcy-video-reviews__arrows-wrapper {
+    --swiper-theme-color: #FFFFFF !important;
+}
+
+.bankruptcy-video-reviews__swiper-button-arrow-tail-row{
+    top: 26px;
+    left: 12px;
+    right: 0;
+    display: flex;
+    gap: 39px;
+    position: absolute;
+}
+ .bankruptcy-video-reviews__swiper-button-arrow-tail{
+    background-color: #FFFFFF;
+    width: 27px;
+    height: 1.5px;
+    border: none;
+ }
+ .bankruptcy-video-reviews__swiper-button-arrow-tail:hover{
+    cursor: pointer;
+ }
+ .bankruptcy-video-reviews__all-video-reviews_btn{
+    width: 243px;
+    height: 58px;
+    border: 1px solid #FF5C00;
+    border-radius: 200px;
+    background: transparent;
+    position: relative;
+    margin: 52px auto 0 auto;
+    cursor: pointer;
+    display: block;
+ }
+ .bankruptcy-video-reviews__all-video-reviews_btn:hover{
+    border: 1px solid white;
+ }
+.bankruptcy-video-reviews__all-video-reviews-btn-row{
+    display: flex;
+}
+.bankruptcy-video-reviews__all-video-reviews-btn-txt{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FF5C00;
+    padding: 0 0 0 34px;
+}
+.bankruptcy-video-reviews__all-video-reviews_btn:hover > .bankruptcy-video-reviews__all-video-reviews-btn-row .bankruptcy-video-reviews__all-video-reviews-btn-txt{
+    color: #FFFFFF;
+}
+.bankruptcy-video-reviews__all-video-reviews-btn-img{
+    padding: 0 0 0 8px;
+}
+.debt-relief-examples{
+    width: 1140px;
+    height: 571px;
+    margin: 83px auto 0 auto;
+}
+.debt-relief-examples .swiper{
+    max-width: 1140px;
+    height: 571px;
+}
+.debt-relief-examples__title{
+    max-width: 737px;
+    height: 78px;
+    font-weight: 500;
+    font-size: 48px;
+}
+.debt-relief-examples .swiper .swiper-wrapper{
+    padding: 26px 0 0 0;
+    height: 361px;
+}
+.debt-relief-examples .swiper .swiper-slide{
+    width: 558px;
+    height: 361px;
+    background-image: url(../images/debt-relief-examples__swiper-slide-bg.png);
+}
+.debt-relief-examples__swiper-slide-row{
+    display: flex;
+    flex-direction: column;
+    padding: 44px 250px 38px 45px;
+    
+}
+.debt-relief-examples__swiper-slide-name{
+    width: 185px;
+    height: 66px;
+    font-weight: 700;
+    font-size: 19px;
+}
+.debt-relief-examples__swiper-slide-case{
+    font-weight: 500;
+    font-size: 15px;
+}
+.debt-relief-examples__swiper-slide-case{
+    width: 280px;
+    height: 31px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.debt-relief-examples__swiper-slide-debt-amount-row{
+    display: flex;
+    flex-direction: column;
+    height: 47px;
+    width: 171px;
+    padding: 20px 0 0 0;
+
+}
+.debt-relief-examples__swiper-slide-debt-amount-txt{
+    font-weight: 300;
+    font-size: 15px;
+    width: 174px;
+}
+.debt-relief-examples__swiper-slide-debt-amount-number{
+    color: #006E9D;
+    line-height: 32px;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 5px 0 0 0;
+}
+.debt-relief-examples__swiper-slide-pdf-row{
+    display: flex;
+    width: 177px;
+    height: 27px;
+    gap: 10px;
+    align-items: center;
+    padding: 60px 0 0 0;
+}
+.debt-relief-examples__swiper-slide-pdf-txt{
+    font-weight: 300;
+    font-size: 15px;
+}
+.debt-relief-examples__swiper-slide-pdf-link-txt{
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration-line: underline;
+    color: #006E9D !important;
+    padding: 9px 0 0 0;
+    line-height: 134.2%;
+    
+}
+.debt-relief-examples .swiper .bankruptcy-text-reviews__arrows-wrapper{
+    right: 0;
+    left: 1020px;
+}
+.debt-relief-examples .swiper .bankruptcy-text-reviews__swiper-button-arrow-tail-row{
+    top: 26px;
+    gap: 40px;
+    right: 13px;
+}
+.debt-relief-examples__btn-all-cases{
+    width: 243px;
+    height: 58px;
+    border: 1px solid #313131;
+    border-radius: 200px;
+    position: relative;
+    background: transparent;
+    top: 48px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.debt-relief-examples__btn-all-cases:hover{
+    background-color: #5AB1FF;
+    border: none;
+}
+.debt-relief-examples__btn-all-cases-row{
+    display: flex;
+    align-items: center;
+}
+.debt-relief-examples__btn-all-cases:hover > .debt-relief-examples__btn-all-cases-row .debt-relief-examples__btn-all-cases-txt{
+    color: #FFFFFF;
+}
+.debt-relief-examples__btn-all-cases-txt{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 0 0 68px;
+}
+.debt-relief-examples__btn-all-cases-img{
+    padding: 0 0 0 7px;
+}
+
+
+
+.nums{
+    width: 100%;
+    height: 232px;
+    margin: 79px 0 0 0;
+    position: relative;
+
+}
+.nums__bg{
+    background-image: url(../images/nums__row-img.png);
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 22px 0;
+}
+.nums__row{
+    display: flex;
+    height: 186px;
+    position: relative;
+    z-index: 1;
+    margin: 23px auto 0 auto;
+    right: 0;
+    left: 0;
+    max-width: 1140px;
+    gap: 185px;
+}
+.nums__gradient-rectangle-img{
+    position: absolute;
+    left: -60px;
+}
+.nums__row-number-of-clients-row{
+    max-width: 143px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    padding: 41px 0 31px 0;
+}
+.nums__row-number-of-clients-row-num{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.nums__row-number-of-clients-row-txt{
+    font-weight: 700;
+    font-size: 19px;
+    color: #FFFFFF;
+    max-width: 131px;
+    height: 92px;
+    padding: 6px 0 0 0;
+}
+.nums__row-number-of-money-row {
+    max-width: 199px;
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 57px 0;
+}
+.nums__row-number-of-money-num-row{
+    display: flex;
+    height: 41px;
+    max-width: 195px;
+    align-items: center;
+}
+.nums__row-number-of-money-num{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.nums__row-number-of-money-num-txt{
+    font-weight: 700;
+    font-size: 23px;
+    color: #FFFFFF;
+    padding: 9px 0 0 16px;
+}
+.nums__row-number-of-money-txt{
+    font-weight: 700;
+    font-size: 19px;
+    max-width: 161px;
+    height: 72px;
+    color: #FFFFFF;
+    padding: 14px 0 0 0;
+}
+.nums__row-percent-of-cases-row{
+    max-width: 126px;
+    height: 101px;
+    display: flex;
+    flex-direction: column;
+    padding: 41px 0 54px 0;
+}
+.nums__row-percent-of-cases-num{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.nums__row-percent-of-cases-txt{
+    max-width: 100px;
+    height: 33px;
+    font-weight: 700;
+    font-size: 19px;
+    color: #FFFFFF;
+    padding: 6px 0 0 0;
+}
+.nums__row-percent-of-recommendations-row{
+    max-width: 159px;
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    padding: 41px 0 32px 0;
+}
+.nums__row-percent-of-recommendations-num{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.nums__row-percent-of-recommendations-txt{
+    max-width: 162px;
+    height: 92px; 
+    font-weight: 700;
+    font-size: 19px;
+    color: #FFFFFF;
+    padding: 5px 0 0 0;
+}
+
+
+.work-in{
+    max-width: 1433px;
+    height: 537px;
+    margin: 41px auto 0 auto;
+}
+.work-in__row{
+    display: flex;
+}
+.work-in__info-row{
+    width: 972px;
+    height: 537px;
+    background-image: url(../images/work-in__info-bg.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+.work-in__info-title{
+    width: 571px;
+    height: 144px;   
+    font-weight: 500;
+    font-size: 48px;
+    color: #313131;
+    padding: 86px 109px 0 292px;
+}
+.work-in__info-txt{
+    width: 654px;
+    height: 175px;
+    font-weight: 300;
+    font-size: 17px;
+    color: #313131;
+    padding: 9px 24px 0 294px;
+    line-height: 27px;
+}
+.work-in__info-btn{
+    width: 243px;
+    height: 58px;
+    border: 1px solid #313131;
+    border-radius: 200px;
+    background-color: transparent;
+    margin: 67px 437px 0 292px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+}
+.work-in__info-btn:hover{
+    background-color: #5AB1FF;
+    border: none;
+    color: #FFFFFF;
+}
+.work-in__address-row{
+    height: 455px;
+    max-width: 461px;
+    background-image: url(../images/work-in__address-bg.png);
+    background-repeat: no-repeat;
+    margin: 82px 0 0 0;
+    flex-direction: column;
+    display: flex;
+
+}
+.work-in__address-phone-row-1{
+    display: flex;
+    padding: 45px  209px 0 81px;
+    width: 173px;
+    height: 18px;
+    gap: 11px;
+}
+.work-in__address-phone-row-2{
+    display: flex;
+    padding: 10px  209px 0 81px;
+    width: 179px;
+    height: 18px;
+    gap: 11px;
+}
+.work-in__address-phone{
+    font-weight: 600;
+    font-size: 17px;
+    color: #313131;
+}
+.work-in__address-location-row{
+    display: flex;
+    padding: 30px 0 0 81px;
+    gap: 12px;
+    align-items: center;
+}
+.work-in__address-location-txt{
+    width: 269px;
+    height: 39px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 134.2%;
+}
+.work-in__address-location-img{
+    max-width: 17px;
+    max-height: 20px;
+}
+.work-in__address-mail-row{
+    display: flex;
+    align-items: center;
+    width: 186px;
+    height: 17px;
+    padding: 34px 0 0 81px;
+    gap: 11px;
+}
+.work-in__address-mail-txt{
+    font-weight: 300;
+    font-size: 17px;
+}
+.work-in__address-phone-row-3{
+    display: flex;
+    padding: 73px 0 0 81px;
+    gap: 11px;
+    align-items: center;
+}
+
+
+
+.our-team {
+    max-width: 1140px;
+    height: 448px;
+    margin: 144px auto 0 auto;
+}
+.our-team .swiper{
+    width: 1140px;
+    height: 448px;
+}
+.our-team .swiper .swiper-wrapper{
+    width: 1140px;
+    height: 312px;
+    padding: 69px 0 0 0;
+}
+.our-team__title{
+    font-weight: 500;
+    font-size: 48px;
+    color: #313131;
+}
+.our-team .swiper .swiper-wrapper .swiper-slide{
+    width: 194px;
+    height: 307px;
+}
+.our-team .swiper .swiper-wrapper .swiper-slide .swiper-slide__row{
+    display: flex;
+    flex-direction: column;
+    width: 194px;
+    height: 307px;
+}
+.our-team .swiper .swiper-wrapper .swiper-slide .swiper-slide__row .swiper-slide__name{
+    width: 194px;
+    height: 42px;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    color: #313131;
+    padding: 16px 0 0 0;
+    line-height: 21px;
+}
+.our-team .swiper .swiper-wrapper .swiper-slide .swiper-slide__row .swiper-slide__post{
+    width: 194px;
+    height: 45px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 134.2%;
+    text-align: center;
+    padding: 12px 0 0 0;
+}
+.our-team__swiper-button-arrow-tail{
+    width: 27px;
+    height: 1.5px;
+    border: none;
+    background-color: #313131;
+
+}
+.our-team__swiper-button-arrow-tail-row {
+    position: absolute;
+    top: 26px;
+    right: 13px;
+    display: flex;
+    gap: 40px;
+}
+.our-team .swiper .bankruptcy-text-reviews__arrows-wrapper{
+    left: 1019px;
+}
+
+
+.discount-form{
+    width: 100%;
+    height: 567px;
+    background-image: url(../images/discount-form-bg.png);
+    margin: 53px 0 0 0;
+    background-position: center;
+}
+.discount-form__row{
+    width: 717px;
+    height: 479px;
+    display: flex;
+}
+.discount-form__info-row{
+    display: flex;
+    flex-direction: column;
+    padding: 374px 0 0 0;
+}
+.discount-form__info-instructions-txt{
+    width: 261px;
+    height: 81px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+}
+.discount-form__info-date{
+    width: 261px;
+    height: 21px;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: #313131;
+    padding: 45px 0 0 0;
+}
+
+.discount-form__form-wrapper{
+    max-width: 364px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 155px 0 0 76px;
+}
+.discount-form__title{
+    max-width: 363px;
+    height: 56px;   
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+}
+
+.discount-form .form-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 0 0 0;
+
+}
+.discount-form .form__input{
+    max-width: 331px;
+    width: 100%;
+    height: 58px;
+    background: #FFFFFF;
+    border-radius: 200px;
+    border: none;
+    padding: 0 0 0 32px;
+}
+.discount-form .form__input::placeholder{
+    color: #313131;
+    font-weight: 400;
+    font-size: 18px;
+}
+.discount-form .form__btn{
+    max-width: 395px;
+    width: 100%;
+    height: 58px;
+    background: #FF5C00;
+    border-radius: 200px;
+    border: none;
+    cursor: pointer;
+}
+.discount-form .form__btn:hover{
+    background-color: #5AB1FF;
+}
+.discount-form .form__btn-title{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.discount-form .form__chekbox-row{
+    height: 52px;
+    width: 355px;
+    position: relative;
+}
+.discount-form__chekbox-input{
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+.discount-form .discount-form__chekbox-label{
+    font-size: 14px;
+    color:  rgba(49, 49, 49, 0.5);
+    cursor: pointer;
+    position: absolute;
+    padding: 0 0 0 50px;
+
+}
+.discount-form .discount-form__chekbox-label a{
+    color:rgba(49, 49, 49, 0.5);
+}
+.discount-form .discount-form__chekbox-label::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #FFFFFF;
+}
+.discount-form .discount-form__chekbox-label::after{
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    width: 5px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transition: 0.2s ease;
+}
+.discount-form__chekbox-input:not(:checked) + .discount-form__chekbox-label::after{
+    transform: scale(0);
+    opacity: 0;
+
+}
+.discount-form__chekbox-input:checked + .discount-form__chekbox-label::after{
+    transform: rotate(35deg) scale(1);
+    opacity: 1;
+    
+}
+
+
+.map{
+    width: 100%;
+    height: 631px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.map__container{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.map__shadow-top{
+    position: absolute;
+    height: 17px;
+    width: 100%;
+    background-color: rgba(16, 83, 148, 0.13);
+    z-index: 3;
+    top: 0;
+}
+.map__connection{
+    position: absolute;
+    z-index: 3;
+    max-width: 558px;
+    height: 298px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    top: 271px;
+    bottom: 61px;
+    margin: 0 auto;
+}
+.map__connection-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    margin: 0 auto;
+}
+.map__connection-call-info{
+    padding: 58px 0 0 0;
+    font-weight: 500;
+    font-size: 19px;
+    color: #313131;
+    text-align: center;
+}
+.map__connection-phone-num{
+    font-weight: 500;
+    font-size: 36px;
+    color: #313131; 
+    padding: 34px 0 0 0;
+}
+.map__connection-phone-num a{
+    text-decoration: none;
+    color: #313131;
+}
+.map__connection-phone-num a:hover{
+    color:#aca8a8;
+}
+.map__connection-free-in-russia{
+    font-weight: 300;
+    font-size: 15px;
+    color: rgba(49, 49, 49, 0.72);
+    padding: 19px 0 0 0;
+
+}
+.map__connection-logo-row{
+    display: flex;
+    align-items: center;
+    padding: 36px 0 0 0 ;
+    gap: 8px;
+}
+.social-label-phone-img{
+    padding: 9px 9px 10px 10px ;
+}
+.social-label-telegram-img{
+    padding: 10px 11px 9px 10px;
+}
+.social-label-whatsApp-img{
+    padding: 10px 10px 9px 11px;
+}
+.social-label-instagram-img{
+    padding: 11px;
+}
+.social-label-facebook-img{
+    padding: 10px 14px 10px 14px;
+}
+.social-label-vk-img{
+    padding: 15px 11px 14px 10px;
+}
+.social-label-youtube-img{
+    padding: 13px 10px 13px 10px;
+}
+.social-label-ok-img{
+    padding: 8px 12px 8px 13px ;
+}
+
+
+
+.footer{
+    height: 134px;
+    background-color: #313131;
+}
+.footer__row{
+    max-width: 1140px;
+    height: 134px ;
+    display: flex;
+    gap: 270px;
+}
+.footer__side_left{
+    max-width: 393px;
+    height: 134px;
+    padding: 0 0 0 2px;
+}
+.footer__side_right{
+    width: 475px;
+    height: 134px;
+}
+.footer__side-row_left{
+    display: flex;
+    flex-direction: column;
+}
+.footer__side-content-row_left_up{
+    display: flex;
+    align-items: center;
+    padding: 17px 0 0 0;
+    gap: 8px;
+}
+.footer__side-content-logo-row_left_up{
+    display: flex;
+    gap: 8px;
+}
+.footer__left-side-up-content-logo-name{
+    padding: 0 0 0 9px;
+}
+.footer__side-content-txt_left_up{
+    padding: 0 0 0 28px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+.footer__side-rights_left{
+    padding: 21px 0 0 0 ;
+    font-weight: 300;
+    font-size: 13px;
+    color: rgba(200, 200, 200, 0.44);
+}
+.footer__side-content-row_left_low{
+    display: flex;
+    padding: 10px 0 0 0 ;
+    gap: 17px;
+}
+.footer__side-content-confidentiality_left_low{
+    font-weight: 300;
+    font-size: 13px;
+    color: rgba(200, 200, 200, 0.44);
+}
+.footer__side-content-terms_left_low{
+    font-weight: 300;
+    font-size: 13px;
+    color: rgba(200, 200, 200, 0.44);
+}
+
+.footer__side-row_right{
+    display: flex;
+    flex-direction: column;
+    padding: 28px 0 0 0 ;
+}
+.footer__side-content-row_right_up{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__phone-info-row_up{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.footer__phone-info-number_up{
+    font-weight: 500;
+    font-size: 17px;
+}
+.footer__phone-info-number_up a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.footer__phone-info-number_up a:hover{
+    color: rgba(255, 255, 255, 0.72);
+}
+.footer__phone-info-text_up{    
+    font-weight: 300;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.72);
+}
+.footer__free-consultation_up{
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: #5AB2FF;
+}
+.footer__free-consultation_up:hover{
+    color: #a2cff7;
+}
+.footer__side-search-form_right_low{
+    width: 475px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 300px;
+    margin: 26px 0 0 0;
+    display: inline-flex;
+}
+.search-btn-txt{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 413px;
+    padding: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #797979;
+}
+.search-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+a#scrolling{
+    background: url(../images/up-btn.png);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 225px;
+    bottom: 64px;
+    z-index: 10;
+    display: none;
+}
+a#scrolling:hover{
+    background-position: 0 0;
+}
+.popup__wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 51;
+    background-color: rgba(0, 0, 0, 0.62);
+    cursor: pointer;
+}
+
+.call-popup{
+    width: 646px;
+    max-width: 100%;
+    height: 373px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 52;
+    opacity: 0;
+    display: none;
+}
+.call-popup__cross{
+    position: absolute;
+    top: 19px;
+    right: 16px;
+    cursor: pointer;
+}
+.call-popup__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 558px;
+    width: 100%;
+}
+.call-popup__title{
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 0em;
+}
+.call-popup__info{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0em;
+}
+.call-popup__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 560px;
+    width: 100%;
+}
+.call-popup__form-input-row{
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+.call-popup__form-input-row .form__input {
+    border: 1px solid #000000;
+    border-radius: 200px;
+    max-width: 268px;
+    width: 100%;
+    color: #313131;
+}
+.call-popup .form__btn{
+    max-width: 268px;
+    width: 100%;
+}
+.call-popup__chekbox-row{
+    height: 52px;
+    width: 100%;
+    max-width: 444px;
+    position: relative;
+}
+.call-popup__chekbox-input{
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+.call-popup .form__chekbox-label{
+    color: #31313180;
+}
+.call-popup .form__chekbox-label a{
+    color: #31313180;
+}
+
+.call-popup .form__chekbox-label::before{
+    border: 1px solid black;
+}
+.call-popup .form__chekbox-label::after{
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    width: 5px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transition: 0.2s ease;
+}
+.call-popup__chekbox-input:not(:checked) + .form__chekbox-label::after{
+    transform: scale(0);
+    opacity: 0;
+
+}
+.call-popup__chekbox-input:checked + .form__chekbox-label::after{
+    transform: rotate(35deg) scale(1);
+    opacity: 1;
+    
+}
+
+.consultation-popup{
+    max-width: 720px;
+    width: 100%;
+    height: 543px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    display: none;
+    z-index: 52;
+}
+.consultation-popup__img_remove{
+    position: absolute;
+    top: 19px;
+    right: 16px;
+    cursor: pointer;
+}
+.consultation-popup__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 559px;
+    width: 100%;
+}
+.consultation-popup__title{
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 0em;
+}
+.consultation-popup__info{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0em;
+}
+.consultation-popup__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 560px;
+    width: 100%;
+    gap: 20px;
+}
+.consultation-popup__form-input-row{
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+.consultation-popup__form-input-column{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 100%;
+}
+.consultation-popup .form__input{
+    border: 1px solid black;
+    max-width: 238px;
+    width: 87%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #313131;
+}
+.form__textarea{
+    max-width: 268px;
+    max-height: 192px;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #313131;
+    padding: 20px 29px 0 29px;
+    resize: none;
+}
+.form__textarea::placeholder{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: #313131;
+    
+}
+.consultation-popup .form__btn{
+    max-width: 268px;
+    max-height: 58px;
+    width: 100%;
+}
+.consultation-popup__chekbox-row{
+    height: 52px;
+    width: 100%;
+    max-width: 444px;
+    position: relative;
+}
+.consultation-popup__chekbox-input{
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+.consultation-popup .form__chekbox-label{
+    color: #31313180;
+}
+.consultation-popup .form__chekbox-label a{
+    color: #31313180;
+}
+
+.consultation-popup .form__chekbox-label::before{
+    border: 1px solid black;
+}
+.consultation-popup .form__chekbox-label::after{
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    width: 5px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transition: 0.2s ease;
+}
+.consultation-popup__chekbox-input:not(:checked) + .form__chekbox-label::after{
+    transform: scale(0);
+    opacity: 0;
+
+}
+.consultation-popup__chekbox-input:checked + .form__chekbox-label::after{
+    transform: rotate(35deg) scale(1);
+    opacity: 1;
+    
+}
+
+.errorValidation{
+    border: 2px solid tomato !important;
+}
+
+.tomatoText{
+    color: tomato !important;
+}
+
+
+@media (max-width: 1919px) {
+    .bankruptcy-text-reviews-100-percent__img {
+        right: calc((100vw - 1020px) / 2);
+        left: calc((100vw - 579px));
+    
+    }
+    .bankruptcy-video-reviews{
+        margin: 76px auto;
+    }
+    .debt-relief-examples{
+        margin: 83px auto;
+    }
+
+}
+
+
+@media (max-width: 1658px) {
+    .bankruptcy-text-reviews{
+        height: 800px;
+    }
+    .bankruptcy-text-reviews .swiper .bankruptcy-text-reviews__title{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .bankruptcy-text-reviews .bankruptcy-text-reviews__arrows-wrapper{
+        top: 100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .bankruptcy-text-reviews-100-percent__img {
+        top: 550px;
+    }
+    .bankruptcy-text-reviews .swiper .swiper-wrapper{
+        padding: 200px 0 0 0;
+    }
+    .bankruptcy-text-reviews .swiper{
+        height: 100%;
+    }
+    .bankruptcy-text-reviews__all-reviews-btn{
+        top: 740px;
+    }
+
+}
+@media (max-width: 1530px){
+    .work-in__row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-in{
+       height: 100%;
+       margin: 41px auto;
+    }
+    .work-in__address-row{
+        margin: 36px 0 0 0;
+    }
+    .work-in__info-row {
+        max-width: 100%;
+        background-position-x: center;
+        height: 100%;
+    }
+    .work-in__info-title {
+        width: 100%;
+        font-size: 40px;
+        padding: 86px 0 0 0;
+        margin: 0 auto;
+    }
+    .work-in__info-txt {
+        width: 100%;
+        padding: 9px 0 0 0;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .work-in__info-btn {
+        margin: 67px auto 0 auto;
+    }
+    .discount-form__row {
+        padding: 0 0 0 20px;
+    }
+    .our-team{
+        margin: 144px auto 0 auto;
+    }
+    a#scrolling{
+        right: 100px;
+    }
+
+}
+
+
+@media (max-width: 1400px) {
+    .bankruptcy-text-reviews-100-percent__img{
+        left:calc((100vw - 450px));
+    }
+
+}
+
+@media (max-width: 1300px){
+    .nums__gradient-rectangle-img{
+        display: none;
+
+    }
+}
+
+@media (max-width: 1280px){
+    .work-in__row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-in{
+    height: 1070px;
+    margin: 41px auto;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+        margin: 0 auto;
+    }
+    .header__container-row_up{
+        gap: 32px;
+    }
+    .header__time-of-work_up{
+        padding: 11px 0 11px 0;
+    }
+    .header__social-labels_up{
+        padding: 8px 0 8px 0;
+    }
+    .header__phone-info-row_up{
+        padding: 12px 0 10px 0;
+    }
+    .header__free-consultation_up{
+        padding: 22px 0 21px 0;
+    }
+    .header__law-firm_low{
+        padding: 0 16px;
+    }
+    .header__services-btn_low{
+        margin: 0;
+    }
+    .header__nav-bar-menu-list{
+        gap: 32px;
+        padding: 0 0 0 25px;
+    }
+    .header__nav-bar-menu-list li{
+        font-size: 13px;
+    }
+    #header.scrolled .header__container-row_low .header__law-firm_low {
+        padding: 0 0 0 10px;
+    }
+    #header.scrolled .header__container-row_low .header__nav-bar-menu-list {
+        gap: 15px;
+        padding: 0 0 0 20px;
+    }
+    #header.scrolled .header__container-row_low .header__nav-bar-menu-list li{
+        font-size: 13px;
+    }
+    #header.scrolled .header__container_low .header__scroll-bar-free-consultation{
+
+        padding: 0 0 0 30px;
+    }
+    .stages-of-the-bankruptcy-procedure{
+        height: 1043px;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-linear-gradient-3{
+        visibility: hidden;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-row {
+        flex-wrap: wrap;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-card-4{
+        margin: 10px 0 0 0;
+    }
+    .stages-of-the-bankruptcy-procedure__ol-title{
+        padding: 295px 0 0 0;
+    }
+
+    .simplified-bankruptcy__form-wraper{
+        bottom: 0;
+        right: calc((100vw - 966px) / 2);
+        top: 0;
+    }
+    .simplified-bankruptcy__info-title{
+        font-size: 30px;
+    }
+    .simplified-bankruptcy__info-ul{
+        width: 346px;
+
+    }
+    .simplified-bankruptcy__info-ul li{
+        font-size: 16px;
+    }
+    .discount-form{
+        background-position-x: -387px;
+    }
+    .discount-form .container{
+        max-width: 100%;
+    }
+    .footer__row {
+        gap: 97px;
+    }
+}
+@media (max-width: 1140px) {
+    .bankruptcy-video-reviews{
+        max-width: 970px;
+    } 
+    .bankruptcy-video-reviews .swiper{
+        width: 933px;
+    }
+    .bankruptcy-video-reviews__arrows-wrapper {
+        left: 809px;
+    }
+    .debt-relief-examples {
+        max-width: 100%;
+        margin: 60px auto;
+        height: 650px;
+    }
+    .debt-relief-examples .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        left: 0;
+        top: 85px;
+        margin: 0 auto;
+    }
+    .debt-relief-examples .swiper .bankruptcy-text-reviews__swiper-button-arrow-tail-row {
+        top: 27px;
+        right: 13px;
+    }
+    .debt-relief-examples .swiper{
+        max-width: 554px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .debt-relief-examples .swiper .swiper-wrapper{
+        padding: 105px 0 0 0;
+    }
+    .debt-relief-examples__title{
+        font-size: 35px;
+        text-align: center;
+    }
+    .nums__row {
+        max-width: 970px;
+        gap: 150px;
+        padding: 10px 0 0 0;
+    }
+    .nums__row-number-of-money-num-txt {
+        font-size: 18px;
+    }
+
+    .nums__row-percent-of-cases-txt {
+        font-size: 15px;
+    }
+
+    .nums__row-percent-of-recommendations-txt {
+        font-size: 15px;
+    }
+    .nums__row-number-of-money-txt {
+        font-size: 15px;
+    }
+    .nums__row-number-of-clients-row-txt {
+        font-size: 15px;
+    }
+    .nums__gradient-rectangle {
+        visibility: hidden;
+    }
+    .our-team {
+        max-width: 970px;
+        height: 448px;
+        margin: 144px auto 0 auto;
+    }
+    .our-team .swiper{
+        max-width: 100%;
+        height: 100%;
+    }
+    .our-team .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        left: 800px;
+    }
+
+}
+
+@media (max-width: 970px) {
+    body.lock{
+        overflow: hidden;
+    }
+
+    .container{
+        max-width: 750px;
+        margin: 0 auto;
+    }
+    .discount-form {
+        background-position-x: -389px;
+    }
+    .header::before{
+        opacity: 1;
+        height: 50px;
+    }
+    .header__burger{
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        right: 5px;
+        top: 14px;
+        z-index: 5;
+    }
+    .header__burger span{
+        position: absolute;
+        background-color:black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::before, 
+    .header__burger::after{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+    .header__burger-logo{
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: 6px;
+        left: 5px;
+        cursor: pointer;
+    }
+    .header__burger-phone{
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: 15px;
+        left: 200px;
+    }
+    
+    .header__burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+
+    }
+    
+    .header__menu{
+        position: fixed;
+        top: -104%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue ;
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        padding: 67px 0 0 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__menu.active{
+        top: 0;
+    }
+
+
+    .header__container_up {
+        height: 55px;
+        border-bottom: 0;
+    }
+    .header__container-row_up {
+        align-items: self-start;
+        flex-direction: column;
+    }
+    .header__phone-info-text_up {
+        display: none;
+    }
+    .header__container-row_low {
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .header__logo_low{
+        display: none;
+    }
+    .header__law-firm_low {
+        display: none;
+    }
+    .header__nav-bar-menu-list{
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .discount-form__row {
+        padding: 0 0 0 20px;
+    }
+
+    .stages-of-the-bankruptcy-procedure {
+        height: 100%;
+    }
+    .stages-of-the-bankruptcy-procedure__title {
+        text-align: center;
+    }
+    .stages-of-the-bankruptcy-procedure__row {
+        margin: 0 auto;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-row {
+        justify-content: center;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-linear-gradient-row{
+        display: none;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-card-2-rectangle {
+        padding: 0 0 0 291px;
+        display: none;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-card-4 {
+        margin: 0;
+    }
+    .stages-of-the-bankruptcy-procedure__ol-title {
+        width: 100%;
+    }
+    .stages-of-the-bankruptcy-procedure__ol {
+        padding-inline-start: 16px;
+        margin: 26px 0 0 0;
+        width: 100%;
+    }
+    .stages-of-the-bankruptcy-procedure__ol li{
+        width: 90%;
+    }
+    .simplified-bankruptcy {
+        height: 1466px;
+    }
+    .simplified-bankruptcy__info-container {
+        max-width: 100%;
+    }
+    .simplified-bankruptcy__info-container-row {
+        max-width: 90%;
+        margin: 0 auto;
+
+    }
+    .simplified-bankruptcy__info-title {
+        text-align: center;
+    }
+    .simplified-bankruptcy__info-subtitle {
+        text-align: center;
+    }
+    .simplified-bankruptcy__info-ul {
+        width: 970px;
+        max-width: 90% ;
+    }
+    .simplified-bankruptcy__form-wraper{
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .simplified-bankruptcy__form-container {
+        margin: 0 auto;
+    }
+    .simplified-bankruptcy__info {
+        top: 638px;
+    }
+    .bankruptcy-video-reviews{
+        max-width: 100%;
+        background-position-x: center;
+    }
+    .bankruptcy-video-reviews .swiper {
+        width: 446px;
+        margin: 0 auto;
+    }
+    .bankruptcy-video-reviews__swiper-slide-video {
+        margin: 0 auto;
+    }
+    .bankruptcy-video-reviews__title{
+        text-align: center;
+        padding: 35px 0 65px 0;
+    }
+    .bankruptcy-video-reviews__arrows-wrapper{
+        margin: 0 auto;
+        left: 0;
+        top: 122px;
+    }
+    .our-team .swiper .bankruptcy-text-reviews__arrows-wrapper{
+        left: calc((100vw - 169px));
+        right: 0;
+    }
+    .nums__row {
+        max-width: 750px;
+        gap: 77px;
+    }
+    .nums__gradient-rectangle {
+        visibility: hidden;
+    }
+    .work-in__info-title {
+        text-align: center;
+        width: 90%;
+    }
+    .work-in__info-txt {
+        width: 90%;
+    }
+    .footer {
+        height: 345px;
+    }
+    .footer__row {
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 97px 0 0 0;
+        gap: 33px;
+    }
+    .footer__left-side {
+        max-width: 100%;
+    }
+    .footer__side_right {
+        max-width: 100%;
+    }
+    .footer__side-search-form_right_low {
+        width: 100%;
+    }
+    .search-btn-txt {
+        width: 100%;
+    }
+    a#scrolling {
+        right: 25px;
+    }
+
+}
+
+
+@media (max-width: 842px) {
+    .bankruptcy-text-reviews {
+        height: 800px;
+        margin: 70px 0 0 0;
+    }
+    .bankruptcy-text-reviews .swiper {
+        height: 100%;
+        max-width: 364px;
+    }
+    .bankruptcy-text-reviews .swiper .swiper-wrapper {
+        padding: 190px 0 0 0;
+    }
+    .bankruptcy-text-reviews .swiper .bankruptcy-text-reviews__title{
+        font-size: 33px;
+        margin: 0;
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .bankruptcy-text-reviews__all-reviews-btn{
+        top: 742px;
+    }
+    .bankruptcy-text-reviews-100-percent__img{
+        left: 150px;
+        top: 555px;
+    }
+    .bankruptcy-text-reviews .bankruptcy-text-reviews__arrows-wrapper{
+        top: 108px;
+    }
+    .nums__row{
+        padding: 15px 0 0 0;
+    }
+    .nums__row-number-of-clients-row-num {
+        font-size: 38px;
+    }
+    .nums__row-number-of-clients-row-txt {
+        font-size: 15px;
+    }
+    .nums__row-number-of-money-row {
+        padding: 42px 0 57px 0;
+    }
+    .nums__row-number-of-money-txt{
+        padding: 9px 0 0 0;
+    }
+    .nums__row-number-of-money-num {
+        font-size: 38px;
+    }
+    .nums__row-number-of-money-num-txt {
+        font-size: 18px;
+    }
+    .nums__row-percent-of-cases-num {
+        font-size: 38px;
+    }
+    .nums__row-percent-of-cases-txt {
+        font-size: 15px;
+    }
+    .nums__row-percent-of-recommendations-num {
+        font-size: 38px;
+    }
+    .nums__row-percent-of-recommendations-txt {
+        font-size: 15px;
+    }
+ 
+}
+
+
+@media (max-width: 750px) {
+    .container {
+        max-width: 100%;
+    }
+    .release-from-debt__row {
+        width: 95%;
+        margin: 0 0 0 10px;
+    }
+    .release-from-debt__ul-title {
+        width: 100%;
+    }
+    .release-from-debt__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        padding: 90px 0 10px 0;
+        width: 100%;
+        height: 110px;
+    }
+    .nums__row {
+        max-width: 540px ;
+        gap: 40px;
+    }
+
+}
+@media (max-width: 722px) {
+    .discount-form {
+        height: 560px;
+        background-image: none;
+        background-color: #98CCFF;
+        margin: 53px 0 0 0;
+        padding: 50px 0 0 0;
+    }
+    .discount-form__row {
+        max-width: 360px;
+        padding: 0; 
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        align-items: center;
+        
+    }
+    .discount-form__info-row {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .discount-form__form-wrapper {
+        max-width: 364px;
+        padding: 0; 
+    }
+}
+
+@media (max-width: 629px) {
+    .stages-of-the-bankruptcy-procedure__ol-title {
+        padding: 900px 0 0 0;
+        font-size: 14px;
+    }
+    .stages-of-the-bankruptcy-procedure__ol li{
+        font-size: 14px;
+    }
+    .stages-of-the-bankruptcy-procedure__row {
+        max-width: 90%;
+    }
+    .debt-relief-examples{
+        height: 680px;
+    }
+    .debt-relief-examples .swiper .swiper-wrapper {
+        padding: 135px 0 0 0;
+    }
+    .debt-relief-examples .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        top: 120px;
+    }
+    .debt-relief-examples .swiper .bankruptcy-text-reviews__swiper-button-arrow-tail-row {
+        right: 13px;
+        top: 26px;
+    }
+    .debt-relief-examples .swiper {
+        max-width: 360px;
+    }
+}
+@media (max-width: 560px) {
+    .call-popup__form {
+        width: 95%;
+    }
+    .consultation-popup__row {
+        width: 95%;
+    }
+}
+@media (max-width: 540px) {
+    .simplified-bankruptcy__form-container-row {
+        max-width: 90%;
+        padding: 325px 0 56px 0;
+        margin: 0 auto;
+    }
+    .simplified-bankruptcy__form-container {
+        max-width: 100%;
+        background-position: center;
+    }
+    .simplified-bankruptcy__form-title {
+        max-width: 90%;
+        text-align: center;
+    }
+    .simplified-bankruptcy .form__input {
+        width: 337px;
+    }
+    .simplified-bankruptcy .form__btn {
+        width: 369px;
+    }
+    .simplified-bankruptcy .form__chekbox-row {
+        width: 336px;
+    }
+    .simplified-bankruptcy .form-row {
+        gap: 19px;
+        padding: 38px 0 0 0;
+    }
+    .our-team {
+        height: 500px;
+    }
+    .our-team__title {
+        text-align: center;
+    }
+    .our-team .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        left: 0;
+        right: 0;
+        top: 95px;
+        margin: 0 auto;
+    }
+    .our-team .swiper .swiper-wrapper {
+        padding: 140px 0 0 0;
+    }
+    .nums{
+        background-color: #5ab2ff;
+        height: 100%;
+    }
+    .nums__bg{
+        display: none;
+    }
+    .nums__row {
+        max-width: 75% ;
+        height: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 0 0 0;
+    }
+    .nums__row-number-of-clients-row{
+        padding: 0;
+        max-width: 100%;
+    }
+    .nums__row-number-of-clients-row-num {
+        font-size: 28px;
+    }
+    .nums__row-number-of-clients-row-txt {
+
+        width: 131px;
+    }
+    .nums__row-number-of-money-row {
+        padding: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+    .nums__row-number-of-money-txt {
+        padding: 4px 0 0 0;
+        max-width: 131px;
+    }
+    .nums__row-number-of-money-num {
+        font-size: 28px;
+    }
+    .nums__row-number-of-money-num-row{
+        height: 34px;
+    }
+    .nums__row-number-of-money-num-txt {
+        font-size: 15px;
+    }
+    .nums__row-percent-of-cases-row{
+        padding: 0;
+        width: 131px;
+        height: 100%;
+    }
+    .nums__row-percent-of-cases-num {
+        font-size: 28px;
+    }
+    .nums__row-percent-of-cases-txt {
+        width: 131px;
+    }
+    .nums__row-percent-of-recommendations-row{
+        padding: 0;
+        max-width: 131px;
+        height: 100%;
+    }
+    .nums__row-percent-of-recommendations-num {
+        font-size: 28px;
+    }
+    .nums__row-percent-of-recommendations-txt {
+        width: 131px;
+    }
+}
+
+@media (max-width: 476px){
+    .work-in__address-row {
+        width: 97%;
+        background-position-x: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .work-in__address-phone-row-1{
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-phone-row-2 {
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-location-row {
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-location-txt {
+        width: 260px;
+    }
+    .work-in__address-mail-row {
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-phone-row-3 {
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-location-row {
+        padding: 0 0 0 15px;
+    }
+    .work-in__address-mail-row {
+        padding: 0 0 0 15px;
+    }
+    .discount-form__row {
+        width: 95%;
+    }
+    .discount-form__info-instructions-txt {
+        width: 100%;
+    }
+    .discount-form__info-date {
+        width: 100%;
+    }
+    .discount-form__form-wrapper {
+        padding: 0;
+        width: 100%;
+    }
+    .discount-form .form__input {
+        width: 80%;
+    }
+    .discount-form .form__btn {
+        width: 91%;
+    }
+    .discount-form .form__chekbox-row {
+        width: 80%;
+    }
+    .map__connection-logo-row{
+        gap: 4px;
+    }
+    .footer__left-side {
+        max-width: 95%;
+    }
+    .footer__side_right {
+        width: 96%;
+    }
+    .footer__side-search-form_right_low {
+        width: 98%;
+    }
+}
+
+
+@media (max-width: 445px) {
+    .simplified-bankruptcy__info{
+        background-repeat: repeat;
+        height: 672px;
+    }
+    .bankruptcy-video-reviews .swiper {
+        max-width: 99% ;
+    }
+    .bankruptcy-video-reviews__swiper-slide-video {
+        max-width: 345px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .bankruptcy-video-reviews__swiper-slide-name-and-case-row {
+        padding: 25px 20px 0 20px;
+    }
+    .bankruptcy-video-reviews__swiper-slide-debt-amount-row {
+        padding: 30px 20px 0 20px;
+    }
+    .our-team .swiper {
+        max-width: 360px;
+        width: 90%;
+    }
+    .our-team .swiper .swiper-wrapper .swiper-slide .swiper-slide__row {
+        margin: 0 auto;
+    }
+    .our-team__title {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .our-team .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        margin: 0 auto;
+        left: 0;
+    }
+    .footer__phone-info-text_up{
+        display: none;
+    }
+    .call-popup__info {
+        width: 80%;
+    }
+}
+@media (max-width: 388px){
+    .footer {
+        height: 370px;
+    }
+    .footer__row{
+        height: 100%;
+        padding: 0;
+        gap: 95px;
+        margin: 0 20px;
+    }
+    .footer__side-content-row_left_up {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__side-content-txt_left_up {
+        padding: 0; 
+    }
+    .footer__side-rights_left{
+        padding: 0;
+    }
+    .footer__side-row_left {
+        align-items: center;
+        gap: 20px;
+    }
+    .footer__side-content-row_left_low {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .footer__side-row_right {
+        padding: 0;
+    }
+    .footer__side-content-row_right_up{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 380px) {
+    .header__burger-phone{
+        left: 170px
+    }
+    .simplified-bankruptcy__form-container-row {
+        width: 368px;
+        padding: 325px 0 56px 0;
+    }
+    .simplified-bankruptcy__form-container {
+        width: 366px;
+    }
+    .simplified-bankruptcy .form__input {
+        max-width: 300px;
+        width: 80%;
+    }
+    .simplified-bankruptcy .form__btn {
+        max-width: 332px;
+        width: 90%;
+    }
+    .simplified-bankruptcy .form__chekbox-row {
+        width: 300px;
+    }
+    .simplified-bankruptcy .form-row {
+        gap: 19px;
+    }
+    .simplified-bankruptcy__form-title {
+        width: 328px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .simplified-bankruptcy__info-container-row {
+        padding: 56px 0 0 0;
+    }
+    .simplified-bankruptcy__info-title {
+        text-align: center;
+    }
+    .simplified-bankruptcy__info-subtitle {
+        text-align: center;
+    }
+    .nums__row {
+        max-width: 360px ;
+        gap: 6px;
+    }
+}
+@media (max-width: 360px) { 
+    .nums__row {
+        max-width: 280px ;
+        gap: 10px;
+    }
+    .our-team {
+        height: 570px;
+    }
+    .our-team .swiper .bankruptcy-text-reviews__arrows-wrapper {
+        top: 150px;
+    }
+    .debt-relief-examples__swiper-slide-row {
+        width: 100%;
+    }
+    .call-popup__title{
+        width: 80%;
+    }
+    .consultation-popup{
+        height: 600px;
+    }
+    .call-popup{
+        height: 510px;
+    }
+    .call-popup__row {
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 333px) { 
+    .header__burger-phone{
+        display: none;
+    }
+    .map__connection-logo-row {
+        gap: 1px;
+    }
+    .our-team {
+        margin: 200px 0 0 0;
+    }
+}
+@media (max-width: 317px) { 
+    .header__burger-menu-phone{
+        display: block;
+    }
+    .header__container_up{
+        display: none;
+    }
+    .release-from-debt__title {
+        line-height: 30px;
+    }
+    .stages-of-the-bankruptcy-procedure .container{
+        max-width: 90%;
+    }
+    .stages-of-the-bankruptcy-procedure__row{
+        max-width: 90%;
+    }
+    .stages-of-the-bankruptcy-procedure__title{
+        font-size: 40px;
+    }
+    .stages-of-the-bankruptcy-procedure__stages-cards-wraper{
+        width: 100%;
+    }
+    .simplified-bankruptcy .form-row{
+        width: 90%;
+    }
+    .simplified-bankruptcy__form-container-row{
+        padding: 317px 0 56px 0;
+    }
+    .simplified-bankruptcy .form__chekbox-row {
+        width: 100%;
+    }
+    .simplified-bankruptcy__info {
+        height: 725px;
+    }
+    .bankruptcy-text-reviews {
+        height: 850px;
+        margin: 120px 0 0 0;
+    }
+    .bankruptcy-text-reviews .swiper .swiper-wrapper {
+        padding: 236px 0 0 0;
+    }
+    .bankruptcy-text-reviews__swiper-slide-info-row {
+        width: 85%;
+    }
+    .bankruptcy-text-reviews__swiper-slide-main-txt {
+        font-size: 14px;
+    }
+    .work-in__address-location-txt{
+        width: 85%;
+    }
+    .bankruptcy-video-reviews__title {
+        font-size: 40px;
+    }
+    .bankruptcy-text-reviews__all-reviews-btn {
+        top: 791px;
+    }
+    .bankruptcy-text-reviews-100-percent__img {
+        top: 610px;
+    }
+    .bankruptcy-text-reviews .bankruptcy-text-reviews__arrows-wrapper {
+        top: 150px;
+    }
+    .map{
+        height: 713px;
+    }
+    .map__connection{
+        height: 385px;
+    }
+    .map__connection-phone-num {
+        font-size: 33px;
+    }
+    .map__connection-logo-row{
+        flex-wrap: wrap;
+    }
+    .form__chekbox-label {
+        font-size: 13px;
+    }
+}
