@@ -2673,14 +2673,14 @@ a#scrolling:hover{
         width: 90%;
     }
     .footer {
-        height: 345px;
+        height: 385px;
     }
     .footer__row {
         max-width: 100%;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        padding: 50px 0 0 0;
+        padding: 70px 0 0 0;
         gap: 33px;
     }
     .footer__left-side {
@@ -2819,6 +2819,12 @@ a#scrolling:hover{
         max-width: 364px;
         padding: 0; 
     }
+    .consultation-popup{
+        width: 90%;
+    }
+    .call-popup{
+        width: 90%;
+    }
 }
 
 @media (max-width: 629px) {
@@ -2848,14 +2854,28 @@ a#scrolling:hover{
     .debt-relief-examples .swiper {
         max-width: 360px;
     }
-}
-@media (max-width: 560px) {
-    .call-popup__form {
+    .call-popup__form{
+        width: 95%;
+    }
+    .call-popup__info{
+        text-align: center;
         width: 95%;
     }
     .consultation-popup__row {
         width: 95%;
     }
+}
+@media (max-width: 560px) {
+    .call-popup__form {
+        width: 95%;
+    }
+    .consultation-popup__title {
+        text-align: center;
+    }
+    .consultation-popup__info{
+        text-align: center;
+    }
+
 }
 @media (max-width: 540px) {
     .simplified-bankruptcy__form-container-row {
@@ -3072,8 +3092,14 @@ a#scrolling:hover{
     .footer__phone-info-text_up{
         display: none;
     }
+    .call-popup{
+        height: 450px;
+    }
     .call-popup__info {
         width: 80%;
+    }
+    .consultation-popup{
+        height: 570px;
     }
 }
 @media (max-width: 388px){
@@ -3175,6 +3201,7 @@ a#scrolling:hover{
     }
     .call-popup__title{
         width: 80%;
+        text-align: center;
     }
     .consultation-popup{
         height: 600px;
