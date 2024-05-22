@@ -2354,9 +2354,6 @@ a#scrolling:hover{
         width: 346px;
 
     }
-    .simplified-bankruptcy__info-ul li{
-        font-size: 16px;
-    }
     .discount-form{
         background-position-x: -387px;
     }
@@ -2830,10 +2827,9 @@ a#scrolling:hover{
 @media (max-width: 629px) {
     .stages-of-the-bankruptcy-procedure__ol-title {
         padding: 900px 0 0 0;
-        font-size: 14px;
     }
     .stages-of-the-bankruptcy-procedure__ol li{
-        font-size: 14px;
+        padding: 16px 0 0 16px;
     }
     .stages-of-the-bankruptcy-procedure__row {
         max-width: 90%;
@@ -2853,6 +2849,9 @@ a#scrolling:hover{
     }
     .debt-relief-examples .swiper {
         max-width: 360px;
+    }
+    .debt-relief-examples .swiper .swiper-slide{
+        background-position: center;
     }
     .call-popup__form{
         width: 95%;
@@ -3056,6 +3055,15 @@ a#scrolling:hover{
 
 
 @media (max-width: 445px) {
+    .release-from-debt__row{
+        gap: 20px;
+    }
+    .release-from-debt__title {
+        text-align: center;
+    }
+    .release-from-debt__btn{
+        margin: 42px auto;
+    }
     .simplified-bankruptcy__info{
         background-repeat: repeat;
         height: 672px;
