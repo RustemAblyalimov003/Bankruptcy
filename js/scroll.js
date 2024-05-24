@@ -16,8 +16,10 @@ $(document).ready(() => {
             $('html, body').stop().animate({
               scrollTop: $($(anchor).attr('href')).offset().top
             }, 777);
-            $('.header__burger, .header__menu').toggleClass('active');
-            $('body').toggleClass('lock');
+            if($('.header__burger').css("display") === "block"){
+                $('.header__burger, .header__menu').toggleClass('active');
+                $('body').toggleClass('lock');
+            }
             event.preventDefault();
             return false;
     });
